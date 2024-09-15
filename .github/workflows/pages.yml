@@ -49,7 +49,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo --minify --themesDir ../.. -d ../docs --baseURL https://nunocoracao.github.io/blowfish/
+          hugo --minify --themesDir ../.. -d ../docs --baseURL https://emrehayta.github.io/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -59,7 +59,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://nunocoracao.github.io/blowfish/
+      url: https://emrehayta.github.io/
     runs-on: ubuntu-latest
     needs: build
     steps:
