@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://emrehayta.github.io/sitemap.xml
