@@ -63,9 +63,9 @@
    pageRef = "tags"
    weight = 1
 
-[[footer]]
-  name = "Privacy"
-  url = "https://external-link"
+#[[footer]]
+#  name = "Privacy"
+#  url = "https://external-link"
 
 # [[footer]]
 #   name = "Categories"
