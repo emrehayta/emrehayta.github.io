@@ -1,7 +1,7 @@
 ---
 title: "Hugo and GitHub Pages: My Journey to the Perfect Blogging Platform"
 date: 2024-09-15T10:36:54+02:00
-draft: false
+draft: true
 description: "Ein Leitfaden zur Einrichtung von Hugo und GitHub Pages für einen Blog."
 ---
 
