@@ -45,17 +45,17 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with Hugo
         env:
-          # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
           hugo --minify --themesDir ../.. -d docs --baseURL https://emrehayta.github.io/
+          echo "Build completed"
+          ls -la docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
-      - name: Check Files
-        run: ls -la
+
 
   # Deployment job
   deploy:
