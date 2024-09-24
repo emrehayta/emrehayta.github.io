@@ -17,18 +17,18 @@
 
 [[main]]
   name = "LinkedIn"
-  weight = 10
+  weight = 20
   url = "https://www.linkedin.com/in/emrehayta/"
 
 [[main]]
   name = "GitHub"
-  weight = 10
-  url = "https://www.linkedin.com/in/emrehayta/"
+  weight = 30
+  url = "https://github.com/emrehayta/"
 
 [[main]]
   name = "Tags"
   pageRef = "tags"
-  weight = 30
+  weight = 15
 
 #[[main]]
 #  name = "Portfolio"

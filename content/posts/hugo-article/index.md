@@ -31,3 +31,6 @@ First, you need to install Hugo on your computer. The installation is straightfo
   
   ```bash
   brew install hugo
+
+- **Linux**: Use your distribution's package manager or download the binary from the Hugo website.
+
