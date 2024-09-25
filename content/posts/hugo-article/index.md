@@ -1,6 +1,6 @@
 ---
 title: "Guide to Setting Up a Blog with Hugo and GitHub Pages"
-date: 2024-09-25
+date: 2024-09-20
 tags: ["Hugo", "GitHub Pages", "Blogging", "Web Development"]
 description: "A step-by-step guide on how to set up your own blog using Hugo and GitHub Pages."
 draft: false
