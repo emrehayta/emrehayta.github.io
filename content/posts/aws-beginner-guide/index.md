@@ -53,7 +53,7 @@ AWS offers flexible pricing models, but costs can quickly add up. Set budget ala
 
 --- 
 
-#### Conclusion
+### Conclusion
 Getting started with AWS can be challenging, but with the right resources and a clear focus, you can quickly gain momentum. The AWS services introduced here are some of the most commonly used by beginners. By familiarizing yourself with these and following the tips outlined, you'll be well on your way to working successfully with AWS.
 
 ---
