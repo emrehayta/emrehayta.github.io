@@ -9,14 +9,6 @@ draft: false
 ## Introduction
 Linux offers a multitude of powerful commands that make working on the command line efficient and effective. Whether you are managing files, monitoring system resources, or networking, knowing the right commands can save you a lot of time. This article introduces essential Linux commands and will be regularly updated with new commands and useful tips.
 
-## Table of Contents
-- [File and Directory Management](#file-and-directory-management)
-- [File and Text Manipulation](#file-and-text-manipulation)
-- [System Information and Process Management](#system-information-and-process-management)
-- [Networking](#networking)
-- [Tips and Tricks](#tips-and-tricks)
-- [Quick Reference (Cheatsheet)](#quick-reference-cheatsheet)
-- [Updates](#updates)
 
 ## File and Directory Management
 ### `ls` - List Files and Directories
@@ -46,6 +38,8 @@ Linux offers a multitude of powerful commands that make working on the command l
 - `cp file.txt /home/user/` – Copies `file.txt` to `/home/user/`.
 - `cp -r folder1 folder2` – Recursively copies `folder1` to `folder2`.
 
+---
+
 ## File and Text Manipulation
 ### `cat` - Concatenate and Display Files
 **Syntax**: `cat [OPTIONS] [FILE]`
@@ -65,6 +59,8 @@ Linux offers a multitude of powerful commands that make working on the command l
 - `grep "error" logfile.txt` – Searches for the word "error" in `logfile.txt`.
 - `ps aux | grep ssh` – Searches for "ssh" in the list of running processes.
 
+---
+
 ## System Information and Process Management
 ### `top` - Display Running Processes
 **Syntax**: `top`
@@ -82,6 +78,8 @@ Linux offers a multitude of powerful commands that make working on the command l
 
 **Examples**:
 - `df -h` – Displays disk space usage in a human-readable format.
+
+---
 
 ## Networking
 ### `ping` - Check Host Availability
@@ -111,6 +109,8 @@ Linux offers a multitude of powerful commands that make working on the command l
 - `grep -i "pattern" file.txt` – Case-insensitive search for "pattern" in `file.txt`.
 - `grep -r "pattern" /path/to/dir` – Recursively searches for "pattern" in a directory.
 
+---
+
 ## Quick Reference (Cheatsheet)
 | Command  | Description                          |
 |----------|--------------------------------------|
@@ -125,6 +125,7 @@ Linux offers a multitude of powerful commands that make working on the command l
 | `df`     | Display disk space usage              |
 | `ping`   | Check host availability               |
 | `curl`   | Transfer data from or to a server     |
+
 
 
 
