@@ -9,6 +9,7 @@ draft: false
 ## Introduction
 Linux offers a multitude of powerful commands that make working on the command line efficient and effective. Whether you are managing files, monitoring system resources, or networking, knowing the right commands can save you a lot of time. This article introduces essential Linux commands and will be regularly updated with new commands and useful tips.
 
+---
 
 ## File and Directory Management
 ### `ls` - List Files and Directories
