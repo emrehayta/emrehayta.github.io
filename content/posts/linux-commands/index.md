@@ -1,7 +1,7 @@
 ---
 title: "Essential Linux Commands: A Growing Cheat Sheet for Everyday Use"
 date: 2024-09-28
-tags: ["Linux", "Bash", "CLI", "Command Line", "Terminal", "Unix"]
+tags: ["Linux", "Bash", "CLI", "Command Line", "Terminal", "Unix", "Debian"]
 description: "A continually updated guide to essential Linux commands, covering file management, system monitoring, and networking with practical examples."
 draft: false
 ---
