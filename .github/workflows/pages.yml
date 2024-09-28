@@ -48,7 +48,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo --minify --themesDir ../.. -d docs --baseURL https://emrehayta.github.io/
+          hugo --minify --themesDir ../.. -d docs --baseURL https://emr3.me/
           echo "Build completed"
           ls -la docs
       - name: Upload artifact
