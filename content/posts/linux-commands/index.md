@@ -1,151 +1,213 @@
 ---
-title: "Linux Storage: An Introduction to Filesystems, fstab, and Essential Commands"
-date: 2024-10-18
-tags: ["Linux", "Bash", "CLI", "Command Line", "Terminal", "Unix", "Debian", "Ubuntu", "Filesystems", "LVM"]
-description: "This blog post provides a comprehensive overview of Linux storage, covering filesystems, the /etc/fstab configuration, essential commands like lsblk, blkid, df, fdisk, and mkfs, and an introduction to Logical Volume Management (LVM) for effective data management."
-draft: true
+title: "Essential Linux Commands: A Growing Cheat Sheet for Everyday Use"
+date: 2024-09-28
+tags: ["Linux", "Bash", "CLI", "Command Line", "Terminal", "Unix", "Debian"]
+description: "A continually updated guide to essential Linux commands, covering file management, system monitoring, and networking with practical examples."
+draft: false
 ---
 
 ## Introduction
-In the world of Linux, data storage plays a crucial role. This article will cover the fundamentals of Linux storage solutions, including filesystems, the configuration of the /etc/fstab file, and important commands for managing storage. We will also introduce Logical Volume Management (LVM), which allows for flexible handling of storage resources.
+Linux offers a multitude of powerful commands that make working on the command line efficient and effective. Whether you are managing files, monitoring system resources, or networking, knowing the right commands can save you a lot of time. This article introduces essential Linux commands and will be regularly updated with new commands and useful tips.
 
 ---
 
-## What are Filesystems?
-**Definition:** Explain what a filesystem is and its purpose (e.g., organization, storage, retrieval of data).
+## File and Directory Management
 
-**Types of Filesystems:** Provide an overview of common Linux filesystems such as:
 
-- **Ext4:** The most widely used filesystem in Linux, known for its robustness and performance. It supports large files and has journaling capabilities to enhance data integrity.
-- **XFS:** Optimized for high performance, particularly with large files and concurrent access. It is often used in enterprise environments where speed and scalability are critical.
-- **Btrfs:** A modern filesystem that includes features like snapshots, built-in RAID, and self-healing capabilities. It is designed for high performance and easy management.
-- **ZFS:** A powerful filesystem known for its data integrity features, compression, and snapshot capabilities (Note: A separate blog post about ZFS will be coming soon).
 
-## The /etc/fstab File
-**Definition and Purpose:** The /etc/fstab file (file system table) is a configuration file on Linux systems that defines how disk partitions, block devices, and remote filesystems should be mounted and integrated into the filesystem. It automates the mounting process at boot time, ensuring that necessary filesystems are available for use without manual intervention.
-**Format:** The format of the /etc/fstab file consists of several fields, each separated by whitespace. The typical structure includes:
-1. Device: The device file (e.g., /dev/sda1) or UUID of the filesystem to be mounted.
-2. Mount Point: The directory where the filesystem will be mounted (e.g., /mnt/data).
-3. Filesystem Type: The type of filesystem (e.g., ext4, xfs, btrfs, zfs).
-4. Options: Mount options (e.g., defaults, noatime, ro for read-only).
-5. Dump: A number indicating whether the filesystem should be backed up (0 or 1).
-6. Pass: A number that indicates the order in which filesystems should be checked at boot time.
 
-**Example:**
-Here is a simple example of an /etc/fstab file:
+### ls  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `ls -lah`    | List files and folder                       |
+| `ls file*`   | List only entries beginning with `file`      |
+| `ls *.txt`   | List only entries ending with `.txt`         |
+| `-l`         | Long format: permissions, owner, group, size|
+| `-a`         | Include all files: hidden files             |
+| `-h`         | Human-readable: KB, MB, or GB format        |
 
-```bash
-UUID=abcd1234-5678-90ef-ghij-klmnopqrstuv /mnt/data ext4 defaults 0 2
-/dev/sdb1 /mnt/backup xfs defaults,noatime 0 0
-```
 
-**Explanation:**
-- The first line mounts an Ext4 filesystem with a specific UUID to the mount point /mnt/data with default options, and it will be checked during boot (indicated by the 2).
-- The second line mounts an XFS filesystem from /dev/sdb1 to /mnt/backup, using the noatime option to prevent the update of access times, and it will not be checked at boot (indicated by the 0).
+### cd  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `cd /path/to/folder` | Change to the specified directory    |
+| `cd ..`      | Go one directory up (parent directory)      |
+| `cd -`       | Switch to the previous directory            |
+| `cd ~`       | Switch to the home directory                |
+
+### cp  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `cp file destination`      | Copy a file to the destination         |
+| `cp -r folder destination` | Recursively copy a folder              |
+| `cp -i source destination` | Prompt before overwriting              |
+| `cp -u source destination` | Copy only if source is newer than destination |
+
+### mv  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `mv source destination`    | Move or rename a file/folder          |
+| `mv -i source destination` | Prompt before overwriting              |
+| `mv -u source destination` | Move only if source is newer than destination |
+
 
 ---
 
-## Important Commands for Managing Storage
+## File and Text Manipulation
+### cat  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `cat file`   | Display the contents of a file              |
+| `cat file1 file2` | Concatenate and display multiple files |
+| `cat > file` | Create a new file and write to it           |
+| `cat >> file`| Append to an existing file                 |
 
-#### lsblk
-**Usage:** Lists all block devices, showing their hierarchy and mount points.
-**Example:** Running lsblk might yield the following output:
+### grep  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `grep 'pattern' file` | Search for a pattern in a file     |
+| `grep -i 'pattern' file` | Case-insensitive search         |
+| `grep -r 'pattern' folder` | Recursively search in a folder|
+| `grep -v 'pattern' file` | Display lines not matching the pattern |
 
-```bash
-NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-sda      8:0    0   500G  0 disk 
-├─sda1   8:1    0   200G  0 part /
-├─sda2   8:2    0   300G  0 part /mnt/data
-```
-**Explanation:** This output shows that the disk /dev/sda has two partitions: /dev/sda1 mounted as the root filesystem and /dev/sda2 mounted at /mnt/data.
+### head  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `head file`  | Display the first 10 lines of a file        |
+| `head -n 20 file` | Display the first 20 lines of a file   |
+| `head -c 50 file` | Display the first 50 bytes of a file   |
+| `head -v file` | Always show file name before output       |
 
-#### blkid
-**Usage:** Displays the UUIDs and types of filesystems on block devices.
-**Example:** Running blkid might produce:
-
-```bash
-/dev/sda1: UUID="abcd1234-5678-90ef-ghij-klmnopqrstuv" TYPE="ext4"
-/dev/sda2: UUID="efgh5678-1234-90ab-cdef-uvwxyz123456" TYPE="xfs"
-```
-
-**Explanation:** This output shows the UUIDs and filesystem types for the partitions on /dev/sda.
-
-#### df
-**Usage:** Shows the available and used space on mounted filesystems.
-**Example:** Running df -h might yield:
-
-```bash
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda1       200G   10G  190G   5% /
-/dev/sda2       300G   50G  250G  17% /mnt/data
-```
-
-**Explanation:** This output provides a human-readable format of the size, used space, available space, and usage percentage for each mounted filesystem.
-
-#### fdisk
-**Usage:** A tool for partitioning disks.
-**Example:** Running fdisk -l might show:
-```bash
-Disk /dev/sda: 500 GB, 500107862016 bytes
-255 heads, 63 sectors/track, 60801 cylinders, total 976773168 sectors
-```
-
-**Explanation:** This output displays information about the disk, including its size, partitioning scheme, and total sectors.
-
-#### mkfs
-**Usage:** Used to create a filesystem on a partition.
-**Example:** To create an Ext4 filesystem on /dev/sdb1, you would run:
-```bash
-mkfs.ext4 /dev/sdb1
-```
-
-**Explanation:** This command formats the specified partition (/dev/sdb1) with the Ext4 filesystem.
+### tail  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `tail file`  | Display the last 10 lines of a file         |
+| `tail -n 20 file` | Display the last 20 lines of a file    |
+| `tail -f file` | Follow and display appended data in real-time |
+| `tail -c 50 file` | Display the last 50 bytes of a file    |
 
 ---
 
-## Logical Volume Management (LVM)
+## Advanced Text Manipulation
 
-### What is LVM?
-Logical Volume Management (LVM) is a system for managing disk space that allows for flexible disk partitioning and management. It provides the ability to create, resize, and delete logical volumes without worrying about the underlying physical storage.
+### awk  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `awk '{print $1}' file` | Print the first column of a file        |
+| `awk -F, '{print $2}' file` | Use a comma as the field separator and print the second column |
+| `awk '/pattern/' file` | Print lines that match a specific pattern |
+| `awk 'NR==1 {print $0}' file` | Print only the first line of the file |
 
-### Core Concepts
-LVM consists of three main components:
+### sed  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `sed 's/old/new/g' file` | Replace all occurrences of "old" with "new" in a file |
+| `sed -n '1,5p' file` | Print only lines 1 to 5 of a file        |
+| `sed '/pattern/d' file` | Delete lines that match a specific pattern |
+| `sed -i 's/old/new/g' file` | In-place replace "old" with "new" in the file |
 
-- **Physical Volumes (PV):** The actual disk drives or partitions.
-- **Volume Groups (VG):** A collection of physical volumes that can be allocated as logical volumes.
-- **Logical Volumes (LV):** Virtual partitions created from the space allocated in volume groups.
-
-
-### Here are examples of important LVM commands:
-
-#### Creating a Physical Volume
-To initialize a physical volume on /dev/sdb, you would run:
-```bash
-pvcreate /dev/sdb
-```
-#### Creating a Volume Group
-To create a volume group named vg_data using the physical volume /dev/sdb, run:
-```bash
-vgcreate vg_data /dev/sdb
-```
-#### Creating a Logical Volume
-To create a logical volume named lv_backup of size 50G within vg_data, run:
-```bash
-lvcreate -n lv_backup -L 50G vg_data
-```
-
-#### Listing Logical/Physical Volumes and Volume Groups:
-To display information about all logical volumes, use:
-```bash
-lvs #To display information about all logical volumes
-pvs #To view all physical volumes and their attributes
-vgs #To display all volume groups and their properties
-```
 ---
 
-## Conclusion
-Understanding Linux storage is crucial for managing an effective and efficient system. From filesystems and the /etc/fstab configuration to essential commands and Logical Volume Management, these concepts equip you with the knowledge needed to handle data storage confidently.
+## System Information and Process Management
+### top  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `top`        | Display real-time system resource usage     |
+| `top -u user`| Show processes for a specific user          |
+| `top -p PID` | Monitor a specific process by PID           |
+| `top -n 1`   | Display output once and exit                |
 
-## Resources
-Include links to further resources, tutorials, and official documentation to give readers the opportunity to deepen their knowledge.
-Feel free to use this version for your blog post. If you have any more requests or need further modifications, just let me know!
+### htop  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `htop`       | Interactive process viewer with more details|
+| `htop -u user` | Show processes for a specific user        |
+| `htop -p PID`| Monitor a specific process by PID           |
+| `htop --tree`| Display processes in a tree view            |
+
+### df  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `df`         | Display disk space usage for all mounted filesystems |
+| `df -h`      | Show disk space usage in human-readable format (e.g., MB, GB) |
+| `df -T`      | Display filesystem type                     |
+| `df -i`      | Show inode usage instead of block usage     |
+
+
+---
+
+## Networking
+### ping  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `ping hostname_or_ip` | Send ICMP echo requests to test network connectivity |
+| `ping -c 4 hostname_or_ip` | Send 4 ICMP echo requests and stop |
+| `ping -i 2 hostname_or_ip` | Set the interval between sending packets to 2 seconds |
+| `ping -t hostname_or_ip` | Ping continuously (until stopped manually) |
+
+### ifconfig  
+| Install: `sudo apt install net-tools`        |
+|--------------|---------------------------------------------|
+| `ifconfig`   | Display network interfaces and their configurations |
+| `ifconfig eth0` | Show details for a specific interface (e.g., eth0) |
+| `ifconfig eth0 up` | Enable the specified interface         |
+| `ifconfig eth0 down` | Disable the specified interface      |
+
+### curl  
+| Install: `sudo apt install curl`             | |
+|--------------|---------------------------------------------|
+| `curl url`   | Fetch the content of the specified URL      |
+| `curl -O url`| Download a file from the URL                |
+| `curl -I url`| Fetch only the headers of the specified URL |
+| `curl -d "data" url` | Send POST data to the specified URL |
+
+### netstat  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `netstat`    | Display network connections, routing tables, interface statistics |
+| `netstat -tuln` | Show listening TCP and UDP ports         |
+| `netstat -i` | Display network interface statistics        |
+| `netstat -r` | Display the kernel routing table            |
+
+### nc (netcat)  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `nc -l 12345` | Listen on port 12345 for incoming connections |
+| `nc -v hostname_or_ip 12345` | Connect to a specified host and port |
+| `nc -zv hostname_or_ip 80` | Check if a specific port is open (e.g., port 80) |
+| `nc -w 5 hostname_or_ip 12345` | Set a timeout of 5 seconds for the connection |
+
+### telnet  
+| Install: `sudo apt install telnet`|   |
+|--------------|---------------------------------------------|
+| `telnet hostname_or_ip port` | Open a connection to a specific host and port |
+| `telnet localhost 25` | Test connection to a local mail server (port 25) |
+| `telnet hostname_or_ip` | Open a connection to a specific host (default port 23) |
+| `telnet ?`  | Display available telnet commands            |
+
+### dig  
+| Install: `sudo apt install dnsutils`|   |
+|--------------|---------------------------------------------|
+| `dig domain` | Perform a DNS lookup for the specified domain |
+| `dig +short domain` | Display a simplified output (just the IP) |
+| `dig @dns_server domain` | Perform a DNS lookup using a specific DNS server |
+| `dig -x ip_address` | Perform a reverse DNS lookup for the IP address |
+
+### nslookup  
+|              |                                             |
+|--------------|---------------------------------------------|
+| `nslookup domain` | Query DNS information for the specified domain |
+| `nslookup` | Enter interactive mode to perform multiple queries |
+| `nslookup domain dns_server` | Query the domain using a specific DNS server |
+| `nslookup -type=any domain` | Query for all available DNS record types |
+
+
+
+---
+
+
+
+## Updates
+- **September 27, 2024**: Added section on networking commands (`ping`, `curl`).
+- **October 15, 2024**: Added new examples for `grep` and `awk`.
+- **October 18, 2024**: Updated structure of blog article
