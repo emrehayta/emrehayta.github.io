@@ -1,0 +1,3 @@
+# Lokal ausführen
+cd ~/git/emrehayta.github.io
+hugo102 server -D
