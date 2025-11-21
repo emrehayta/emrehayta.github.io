@@ -26,6 +26,11 @@
   url = "https://github.com/emrehayta/"
 
 [[main]]
+  name = "Company"
+  weight = 30
+  url = "https://techz.at"
+
+[[main]]
   name = "Tags"
   pageRef = "tags"
   weight = 15
