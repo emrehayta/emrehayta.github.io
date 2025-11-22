@@ -1,6 +1,6 @@
 ---
 title: "How to Fix ‘No Space Left on Device’ on Linux — 10 Common Causes"
-date: 2025-11-21
+date: 2025-11-22
 tags: ["Linux", "Troubleshooting", "Sysadmin", "Filesystems", "Storage", "DevOps", "Disk Management"]
 description: "A complete guide to fixing the 'No Space Left on Device' error on Linux, including 10 real-world causes and step-by-step solutions for storage, inodes, logs, Docker, and more."
 draft: false

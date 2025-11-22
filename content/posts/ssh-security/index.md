@@ -1,6 +1,6 @@
 ---
 title: "SSH Security: Keys, Hardening, Fail2ban, and Best Practices"
-date: 2025-02-21
+date: 2025-02-22
 tags: ["SSH", "Linux Security", "Sysadmin", "Hardening", "Fail2ban", "Public Key Authentication", "DevOps"]
 description: "A practical guide to securing SSH on Linux systems, covering key-based authentication, hardening techniques, Fail2ban configuration, and recommended security practices."
 draft: false
