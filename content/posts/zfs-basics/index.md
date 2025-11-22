@@ -13,7 +13,6 @@ This guide walks you through installing ZFS on Linux, creating pools, working wi
 ---
 
 ### Why ZFS?
-
 ZFS offers features that traditional filesystems (ext4, XFS, btrfs) cannot match:
 
 - **Copy-on-Write (CoW)** — no in-place modifications  
