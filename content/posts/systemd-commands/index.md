@@ -1,6 +1,6 @@
 ---
 title: "Top 20 systemd Commands Every Linux Admin Should Know"
-date: 2025-02-23
+date: 2025-11-23
 tags: ["Linux", "systemd", "Sysadmin", "DevOps", "Automation"]
 description: "A practical guide to the most important systemd commands every Linux administrator should master — including service management, troubleshooting, logs, targets, and performance tuning."
 draft: false
