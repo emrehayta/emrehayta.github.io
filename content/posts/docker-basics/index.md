@@ -129,5 +129,5 @@ docker-compose up --build
 ### Conclusion
 Docker and Docker Compose simplify the development and deployment process, allowing you to manage applications efficiently. In this article, we covered the basics of Docker and Docker Compose, how to run a simple Nginx web server, and how to create a custom Docker image.
 
-Feel free to expand this example further by adding more services or customizing the content as needed!
+Feel free to expand this example further by adding more services or customizing the content as needed.
 
