@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "emr3.me"
+title = "Emre Hayta – Linux & Cloud Engineering Blog"
 
 [params]
   displayName = "EN"
@@ -11,7 +11,7 @@ title = "emr3.me"
   dateFormat = "2 January 2006"
   logo = "img/emr3-nobg.png"
   # secondaryLogo = "img/secondary-logo.png"
-  # description = "Tech Blog"
+  description = "Linux, Cloud, Automatisierung und IT-Freelancing – Blog von Emre Hayta mit praxisnahen Artikeln aus echten Kundenprojekten."
   # copyright = "Copy, _right?_ :thinking_face:"
 
 [params.author]
