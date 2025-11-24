@@ -10,9 +10,11 @@ draft: false
 
 ZFS is one of the most advanced filesystems ever built — combining a volume manager, RAID functionality, snapshots, checksumming, clones, and self-healing data integrity in one powerful system.  
 This guide walks you through installing ZFS on Linux, creating pools, working with datasets, snapshots, clones, and maintaining a healthy storage environment.
+
 ---
 
 ### Why ZFS?
+
 ZFS offers features that traditional filesystems (ext4, XFS, btrfs) cannot match:
 
 - **Copy-on-Write (CoW)** — no in-place modifications  
