@@ -1,6 +1,6 @@
 ---
 title: "Ansible in Production: Inventory, Variables & Structure That Scale"
-date: 2026-01-23
+date: 2026-01-28
 tags: ["ansible", "linux", "automation", "devops", "infrastructure"]
 description: "A practical, production-focused guide to structuring Ansible inventories, variables, and roles so they scale across teams and environments."
 draft: false
