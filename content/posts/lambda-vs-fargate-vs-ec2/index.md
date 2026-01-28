@@ -1,6 +1,6 @@
 ---
 title: "AWS Lambda vs Fargate vs EC2: Choosing the Right Compute for Production"
-date: 2026-01-23
+date: 2026-01-28
 tags: ["aws", "lambda", "fargate", "ec2", "cloud", "devops"]
 description: "A practical, engineer-focused comparison of AWS Lambda, Fargate, and EC2 — with real-world trade-offs around cost, operations, performance, and reliability."
 draft: false
