@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title">
+<title id="title">Before the first change, understand the server.</title>
+<defs><pattern id="g" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#1c3347"/></pattern></defs>
+<path fill="#0b1927" d="M0 0h1600v900H0z"/><path fill="url(#g)" d="M0 0h1600v900H0z"/>
+<g font-family="Helvetica,Arial,sans-serif">
+<path d="M100 96h54" stroke="#ffcf8a" stroke-width="6"/><text x="176" y="104" fill="#ffcf8a" font-size="21" letter-spacing="3">LINUX / HANDOVER</text>
+<text x="100" y="238" fill="#f0f5fa" font-size="76" font-weight="700">Before the first change,</text><text x="100" y="334" fill="#ffcf8a" font-size="76" font-weight="700">understand the server.</text>
+<path d="M260 550h1080" stroke="#4b6579" stroke-width="3"/>
+<rect x="100" y="460" width="320" height="220" rx="16" fill="#102636" stroke="#355267"/>
+<text x="126" y="510" fill="#ffcf8a" font-family="Menlo,monospace" font-size="24">01</text>
+<text x="126" y="575" fill="#f0f5fa" font-size="27" font-weight="700">PURPOSE</text>
+<text x="126" y="624" fill="#adc0ce" font-size="20">Know who relies on it</text>
+<rect x="460" y="460" width="320" height="220" rx="16" fill="#102636" stroke="#355267"/>
+<text x="486" y="510" fill="#ffcf8a" font-family="Menlo,monospace" font-size="24">02</text>
+<text x="486" y="575" fill="#f0f5fa" font-size="27" font-weight="700">ACCESS</text>
+<text x="486" y="624" fill="#adc0ce" font-size="20">Confirm the admin path</text>
+<rect x="820" y="460" width="320" height="220" rx="16" fill="#102636" stroke="#355267"/>
+<text x="846" y="510" fill="#ffcf8a" font-family="Menlo,monospace" font-size="24">03</text>
+<text x="846" y="575" fill="#f0f5fa" font-size="27" font-weight="700">DEPENDENCIES</text>
+<text x="846" y="624" fill="#adc0ce" font-size="20">Map what keeps it running</text>
+<rect x="1180" y="460" width="320" height="220" rx="16" fill="#102636" stroke="#355267"/>
+<text x="1206" y="510" fill="#ffcf8a" font-family="Menlo,monospace" font-size="24">04</text>
+<text x="1206" y="575" fill="#f0f5fa" font-size="27" font-weight="700">RECOVERY</text>
+<text x="1206" y="624" fill="#adc0ce" font-size="20">Prove it can come back</text>
+<path d="M100 760h1400" stroke="#355267"/>
+<text x="100" y="816" fill="#adc0ce" font-size="21" letter-spacing="3">PRACTICAL ENGINEERING NOTES</text><text x="1500" y="816" text-anchor="end" fill="#ffcf8a" font-size="26" font-weight="700">emr3.me</text>
+</g></svg>
