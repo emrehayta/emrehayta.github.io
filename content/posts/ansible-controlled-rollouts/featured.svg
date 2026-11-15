@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title"><title id="title">One host before the whole fleet</title>
+<defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#cfccbd"/></pattern></defs>
+<path fill="#edeadd" d="M0 0h1600v900H0z"/><path fill="url(#dots)" d="M0 0h1600v900H0z"/>
+<g font-family="Helvetica,Arial,sans-serif"><text x="90" y="98" font-size="22" letter-spacing="5" fill="#a13732">ANSIBLE / CHANGE REVIEW</text>
+<text x="90" y="211" font-size="79" font-weight="700" fill="#252b30">One host before</text><text x="90" y="303" font-size="79" font-weight="700" fill="#252b30">the whole fleet.</text>
+<g transform="rotate(-3 534 575)"><rect x="112" y="368" width="830" height="407" rx="4" fill="#d2cfc3"/><rect x="96" y="352" width="830" height="407" rx="4" fill="#fffef7" stroke="#b4b1a5" stroke-width="2"/>
+<text x="134" y="408" font-size="24" fill="#515d64" font-family="Menlo,monospace">review / worker-config.yml</text><path d="M134 434h754" stroke="#dad8ca"/>
+<text x="140" y="485" font-size="24" fill="#515d64" font-family="Menlo,monospace">worker:</text><rect x="130" y="507" width="752" height="53" fill="#f6dcd8"/><rect x="130" y="566" width="752" height="53" fill="#def0df"/>
+<g font-family="Menlo,monospace" font-size="25"><text x="149" y="542" fill="#9e3934">− concurrency: 16</text><text x="149" y="601" fill="#2c6c4f">+ concurrency: 8</text></g><text x="141" y="697" font-size="22" fill="#515d64">Preview → apply → validate → expand</text></g>
+<path d="M951 462q107-84 224-33" fill="none" stroke="#a13732" stroke-width="4"/><path d="m1155 409 27 22-32 9" fill="none" stroke="#a13732" stroke-width="4"/>
+<text x="1072" y="386" fill="#a13732" font-size="25" transform="rotate(6 1072 386)">start here</text>
+<g stroke="#6c7474" stroke-width="3"><rect x="1090" y="460" width="145" height="78" rx="7" fill="#2c6c4f" stroke="#2c6c4f"/><rect x="1295" y="460" width="145" height="78" rx="7" fill="#eeede6"/><rect x="1090" y="584" width="145" height="78" rx="7" fill="#eeede6"/><rect x="1295" y="584" width="145" height="78" rx="7" fill="#eeede6"/></g>
+<g font-family="Menlo,monospace" font-size="20" text-anchor="middle"><text x="1162" y="507" fill="#fff">worker01</text><text x="1367" y="507" fill="#515d64">worker02</text><text x="1162" y="631" fill="#515d64">worker03</text><text x="1367" y="631" fill="#515d64">worker04</text></g>
+<text x="1267" y="724" text-anchor="middle" fill="#515d64" font-size="22">Expand after validation.</text><text x="90" y="842" font-size="21" fill="#515d64">OPERATIONS NOTE / NOVEMBER 2026</text><text x="1500" y="842" text-anchor="end" font-size="25" font-weight="700" fill="#252b30">emr3.me</text></g></svg>

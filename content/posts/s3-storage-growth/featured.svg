@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title"><title id="title">Below the object listing: the other layers of S3 storage</title>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#142b45"/><stop offset="1" stop-color="#203e58"/></linearGradient></defs>
+<path fill="url(#bg)" d="M0 0h1600v900H0z"/><circle cx="433" cy="442" r="310" fill="#1d3c57"/>
+<g font-family="Helvetica,Arial,sans-serif"><text x="88" y="91" font-size="22" letter-spacing="5" fill="#efbc79">AWS / STORAGE ANATOMY</text>
+<path d="M186 292 234 707Q430 814 626 707L674 292" fill="#274c62" stroke="#efbc79" stroke-width="5"/><ellipse cx="430" cy="292" rx="244" ry="77" fill="#345d70" stroke="#efbc79" stroke-width="5"/>
+<path d="M210 425Q430 515 650 425M223 568Q430 662 637 568" fill="none" stroke="#72919e" stroke-width="3" stroke-dasharray="7 8"/>
+<g fill="#9edbc3" stroke="#142b45" stroke-width="3"><rect x="284" y="287" width="97" height="66" rx="8" transform="rotate(-12 333 320)"/><rect x="404" y="301" width="97" height="66" rx="8" transform="rotate(8 452 334)"/><rect x="521" y="280" width="83" height="66" rx="8" transform="rotate(-8 562 313)"/></g>
+<g fill="#d4aa75" stroke="#142b45" stroke-width="3"><path d="m287 487 113-28 113 28-113 28z"/><path d="m287 513 113-28 113 28-113 28z"/><path d="m287 539 113-28 113 28-113 28z"/><path d="m502 490 79-19 30 50-79 19z"/></g>
+<g fill="#b4a3e4"><rect x="293" y="649" width="56" height="43" rx="6"/><rect x="364" y="649" width="56" height="43" rx="6"/><rect x="474" y="667" width="56" height="43" rx="6"/></g>
+<g fill="none" stroke="#8eabbc" stroke-width="2"><path d="M609 330h130V425h69"/><path d="M607 519h201"/><path d="M557 686h182V615h69"/></g>
+<text x="816" y="241" font-size="64" font-weight="700" fill="#fff3df">Below the</text><text x="816" y="316" font-size="64" font-weight="700" fill="#fff3df">object listing.</text>
+<text x="840" y="431" font-size="30" font-weight="700" fill="#9edbc3">CURRENT OBJECTS</text><text x="840" y="473" font-size="23" fill="#bbced9">The application's usual view</text>
+<text x="840" y="538" font-size="30" font-weight="700" fill="#efbc79">HISTORICAL VERSIONS</text><text x="840" y="580" font-size="23" fill="#bbced9">Older contents can remain stored</text>
+<text x="840" y="645" font-size="30" font-weight="700" fill="#c6b8ef">UNFINISHED UPLOADS</text><text x="840" y="687" font-size="23" fill="#bbced9">Parts without a completed object</text>
+<text x="88" y="839" font-size="21" fill="#bbced9">CONCEPTUAL CUTAWAY / NOT MEASURED PROPORTIONS</text><text x="1500" y="839" text-anchor="end" font-size="25" font-weight="700" fill="#efbc79">emr3.me</text></g></svg>
