@@ -1,3 +1,7 @@
+# Emre Hayta — emr3.me
+Self-employed at [techz.at](https://techz.at/) — Linux infrastructure and process automation.
+Project overview: README.md
+
 # Lokal ausführen
 cd ~/git/emrehayta.github.io
-hugo102 server -D
+./hugo-old.sh server -D
